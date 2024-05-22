@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASCII Art Generator</title>
+</head>
+<body>
+    <h1>ASCII Art Generator</h1>
+    
+    <form action="/generate" method="post">
+        <div class="textInputdiv"><textarea class="arrtext" name="textInput" id="textInput" cols="30" rows="10"></textarea></div>
+        
+        <label for="styleSelect">Select Style:</label>
+        <select id="styleSelect" name="filename">
+            <option name="filename" id="filename" value="standard">standard</option>
+            <option name="filename" id="filename" value="shadow">shadow</option>
+            <option name="filename" id="filename" value="thinkertoy">thinkertoy</option>
+            <!-- Add more styles as needed -->
+        </select>
+        
+        <button type="submit">Generate ASCII Art</button>
+    </form>
+    <section>
+        <div id="asciiArtOutput">
+            <!-- Ascii-art output -->
+           <pre class="output"> <div>{{.}}</div></pre>
+        </div>
+    </section>
+</body>
+</html>
